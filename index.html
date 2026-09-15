@@ -6,13 +6,18 @@
   <title>SeriesHub — TV Series Discovery</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
 <header class="nav">
   <a class="logo" href="#"><span>▶</span> SeriesHub</a>
   <nav>
-    <a href="#home">Home</a><a href="#trending">Trending</a><a href="#top">Top Rated</a><a href="#genres">Genres</a>
+    <a href="#home">Home</a>
+    <a href="#trending">Trending</a>
+    <a href="#top">Top Rated</a>
+    <a href="#genres">Genres</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
   <div class="nav-actions">
     <button id="themeBtn" title="Toggle theme">☀</button>
@@ -21,40 +26,95 @@
 </header>
 
 <main id="home">
-<section class="hero">
-  <div class="hero-content">
-    <p class="eyebrow">SERIES OF THE WEEK</p>
-    <h1>Find your next<br><span>great series.</span></h1>
-    <p class="hero-copy">Discover highly rated TV series, hidden gems and fan favourites — all in one cinematic place.</p>
-    <div class="hero-buttons"><a class="primary" href="#trending">Explore Series →</a><button class="ghost" id="randomBtn">🎲 Surprise Me</button></div>
-    <div class="hero-stats"><div><b>500+</b><small>Series</small></div><div><b>9.8</b><small>Top Rating</small></div><div><b>25+</b><small>Genres</small></div></div>
-  </div>
-</section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">SERIES OF THE WEEK</p>
+      <h1>Find your next<br><span>great series.</span></h1>
+      <p class="hero-copy">Discover highly rated TV series, hidden gems and fan favourites — all in one cinematic place.</p>
+      <div class="hero-buttons">
+        <a class="primary" href="#trending">Explore Series →</a>
+        <button class="ghost" id="randomBtn">🎲 Surprise Me</button>
+      </div>
+      <div class="hero-stats">
+        <div><b>500+</b><small>Series</small></div>
+        <div><b>9.8</b><small>Top Rating</small></div>
+        <div><b>25+</b><small>Genres</small></div>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="trending">
-  <div class="section-head"><div><p class="eyebrow">WHAT'S HOT</p><h2>Trending now</h2></div><button class="viewall" data-filter="all">View all →</button></div>
-  <div class="cards" id="trendingCards"></div>
-</section>
+  <!-- Trending -->
+  <section class="section" id="trending">
+    <div class="section-head">
+      <div><p class="eyebrow">WHAT'S HOT</p><h2>Trending now</h2></div>
+      <button class="viewall" data-filter="all">View all →</button>
+    </div>
+    <div class="cards" id="trendingCards"></div>
+  </section>
 
-<section class="search-panel">
-  <div><p class="eyebrow">EXPLORE</p><h2>Search the collection</h2></div>
-  <div class="searchbar"><span>⌕</span><input id="search" placeholder="Search series, genre, year..."><select id="sort"><option value="rating">Highest rated</option><option value="year">Newest</option><option value="name">Name A–Z</option></select></div>
-</section>
+  <!-- Search -->
+  <section class="search-panel">
+    <div><p class="eyebrow">EXPLORE</p><h2>Search the collection</h2></div>
+    <div class="searchbar">
+      <span>⌕</span>
+      <input id="search" placeholder="Search series, genre, year...">
+      <select id="sort">
+        <option value="rating">Highest rated</option>
+        <option value="year">Newest</option>
+        <option value="name">Name A–Z</option>
+      </select>
+    </div>
+  </section>
 
-<section class="section" id="top">
-  <div class="section-head"><div><p class="eyebrow">COMMUNITY FAVOURITES</p><h2>Top rated</h2></div></div>
-  <div class="cards" id="seriesCards"></div>
-</section>
+  <!-- Top Rated -->
+  <section class="section" id="top">
+    <div class="section-head">
+      <div><p class="eyebrow">COMMUNITY FAVOURITES</p><h2>Top rated</h2></div>
+    </div>
+    <div class="cards" id="seriesCards"></div>
+  </section>
 
-<section class="section genres" id="genres">
-  <div class="section-head"><div><p class="eyebrow">BROWSE</p><h2>Choose a genre</h2></div></div>
-  <div class="genre-grid" id="genreGrid"></div>
-</section>
+  <!-- Genres -->
+  <section class="section genres" id="genres">
+    <div class="section-head">
+      <div><p class="eyebrow">BROWSE</p><h2>Choose a genre</h2></div>
+    </div>
+    <div class="genre-grid" id="genreGrid"></div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <h2>About SeriesHub</h2>
+    <p>SeriesHub is your ultimate destination for discovering TV shows. We combine ratings, reviews, and fan favourites into one cinematic hub.</p>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 </main>
 
-<footer><div class="logo"><span>▶</span> SeriesHub</div><p>Discover. Rate. Watch. Repeat.</p><small>© 2026 SeriesHub • Demo website</small></footer>
+<footer>
+  <div class="logo"><span>▶</span> SeriesHub</div>
+  <p>Discover. Rate. Watch. Repeat.</p>
+  <small>© 2026 SeriesHub • Demo website</small>
+</footer>
 
-<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><div id="modalBody"></div></div></div>
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="close" id="close">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
